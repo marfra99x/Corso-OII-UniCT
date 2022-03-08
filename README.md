@@ -1,2 +1,4 @@
-# Corso-OII-UniCT
-Prep for the Italian Olympiad in Informatics at the Dept of Math and Computer Science of the University of Catania
+# Corso di Preparazione alle OII 2022 @ DMI, UniCT
+
+![Logo UniCT](images/logo_uni.png)
+![Logo OII](images/logo_oii.png)
