@@ -37,11 +37,12 @@ int edit_bottom_up(string X, string Y, int N, int M) {
             else if (X[i-1] == Y[j-1]) // se i due caratteri esaminati sono uguali non devo effettuare modifiche su di essi per renderli uguali
                 dp[i][j] = dp[i-1][j-1]; 
 
+            // "quanti passi ci vogliono per trasformare la sottostringa 0..i nella sottostringa 0..j"
             // considero i tre casi e calcolo la soluzione ottima trovando il minimo tra tre valori gia' calcolati
             else dp[i][j] = 1 + tuple_min(
-                dp[i-1][j],
-                dp[i][j-1],
-                dp[i-1][j-1]
+                dp[i-1][j], // remove
+                dp[i][j-1], // insert
+                dp[i-1][j-1] // replace
             );
 
         }
