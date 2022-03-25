@@ -38,7 +38,7 @@ int edit_bottom_up(string X, string Y, int N, int M) {
                 dp[i][j] = dp[i-1][j-1]; 
 
             // "quanti passi ci vogliono per trasformare la sottostringa 0..i nella sottostringa 0..j"
-            // considero i tre casi e calcolo la soluzione ottima trovando il minimo tra tre valori gia' calcolati
+            // considero i tre casi e calcolo la soluzione ottima trovando il minimo tra tre valori GIA' calcolati
             else dp[i][j] = 1 + tuple_min(
                 dp[i-1][j], // remove
                 dp[i][j-1], // insert
@@ -48,7 +48,7 @@ int edit_bottom_up(string X, string Y, int N, int M) {
         }
     }
     
-    // il risultato finale sta nella casella N,M => "quanti passi ci vogliono per trasformare la stringa lunga N nella stringa lunga M"
+    // il risultato finale => "quanti passi ci vogliono per trasformare la stringa lunga N nella stringa lunga M"
     return dp[N][M];
 }
 
