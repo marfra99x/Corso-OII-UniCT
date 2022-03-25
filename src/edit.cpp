@@ -57,14 +57,12 @@ int main() {
     ofstream out("output.txt");
 
     for (int task = 1; task <= 100; task++) {
-
         int N, M;
         string X, Y;
 
         in >> N >> M >> X >> Y;
 
         out << edit_bottom_up(X, Y, N, M) << endl;
-
     }
 
     in.close();
