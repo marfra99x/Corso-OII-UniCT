@@ -56,7 +56,7 @@ int main() {
     ifstream in("input.txt");
     ofstream out("output.txt");
 
-    for (int task = 1; task <= 6; task++) {
+    for (int task = 1; task <= 100; task++) {
 
         int N, M;
         string X, Y;
