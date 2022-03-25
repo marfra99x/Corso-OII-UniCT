@@ -62,7 +62,7 @@ int main() {
 
         in >> N >> M >> X >> Y;
 
-        out << editDP(X, Y, N, M) << endl;
+        out << edit_bottom_up(X, Y, N, M) << endl;
 
     }
 
