@@ -46,8 +46,9 @@ int edit_bottom_up(string X, string Y, int N, int M) {
 
         }
     }
-
-    return dp[N][M]; // il risultato finale sta nella casella N,M => "quanti passi ci vogliono per trasformare la stringa lunga N nella stringa lunga M"
+    
+    // il risultato finale sta nella casella N,M => "quanti passi ci vogliono per trasformare la stringa lunga N nella stringa lunga M"
+    return dp[N][M];
 }
 
 int main() {
