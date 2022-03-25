@@ -34,7 +34,8 @@ int edit_bottom_up(string X, string Y, int N, int M) {
             if (i == 0) dp[i][j] = j; // quante mosse mi servono per trasformare una stringa vuota in una stringa lunga 'j' 
             else if (j == 0) dp[i][j] = i; // quante mosse mi servono per trasformare una stringa lunga 'i' in una stringa vuota
 
-            else if (X[i-1] == Y[j-1]) dp[i][j] = dp[i-1][j-1]; // se i due caratteri esaminati sono uguali, non conto altri passi 
+            else if (X[i-1] == Y[j-1]) // se i due caratteri esaminati sono uguali non devo effettuare modifiche su di essi per renderli uguali
+                dp[i][j] = dp[i-1][j-1]; 
 
             // considero i tre casi e calcolo la soluzione ottima trovando il minimo tra tre valori gia' calcolati
             else dp[i][j] = 1 + tuple_min(
