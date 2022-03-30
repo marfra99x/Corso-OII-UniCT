@@ -49,7 +49,7 @@ int edit_bottom_up(string X, string Y, int N, int M) {
     }
     
     // il risultato finale => "quanti passi ci vogliono per trasformare la stringa lunga N nella stringa lunga M"
-    return dp[N][M];
+    return dp[M][N];
 }
 
 int main() {
