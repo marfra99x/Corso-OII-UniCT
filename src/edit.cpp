@@ -26,9 +26,7 @@ int edit_ricorsiva(string x, string y, int n, int m) {
 }
 
 int edit_bottom_up(string X, string Y, int N, int M) {
-    vector<vector<int>> dp(N+1);
-    for (int i = 0; i <= N; i++)
-        dp[i].resize(M+1);
+    vector<vector<int>> dp(N+1, vector<int>(M+1));
 
     for (int i = 0; i <= N; i++) {
         for (int j = 0; j <= M; j++) {
