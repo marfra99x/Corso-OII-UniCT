@@ -28,8 +28,8 @@ int edit_ricorsiva(string x, string y, int n, int m) {
 int edit_bottom_up(string X, string Y, int N, int M) {
     int dp[M+1][N+1];
 
-    for (int i = 0; i <= N; i++) {
-        for (int j = 0; j <= M; j++) {
+    for (int i = 0; i <= M; i++) {
+        for (int j = 0; j <= N; j++) {
 
             if (i == 0) dp[i][j] = j; // quante mosse mi servono per trasformare una stringa vuota in una stringa lunga 'j' 
             else if (j == 0) dp[i][j] = i; // quante mosse mi servono per trasformare una stringa lunga 'i' in una stringa vuota
