@@ -1,13 +1,13 @@
 #include <fstream>
 #include <iostream>
+#include <algorithm>
+#include <vector>
 #include <string>
 
 using namespace std;
 
 int tuple_min(int a, int b, int c) {
-    if (a < b && a < c) return a;
-    if (b < a && b < c) return b;
-    return c;
+    return min(a, min(b, c));
 }
 
 int edit_ricorsiva(string x, string y, int n, int m) {
@@ -26,10 +26,12 @@ int edit_ricorsiva(string x, string y, int n, int m) {
 }
 
 int edit_bottom_up(string X, string Y, int N, int M) {
-    int dp[M+1][N+1];
+    vector<vector<int>> dp(N+1);
+    for (int i = 0; i <= N; i++)
+        dp[i].resize(M+1);
 
-    for (int i = 0; i <= M; i++) {
-        for (int j = 0; j <= N; j++) {
+    for (int i = 0; i <= N; i++) {
+        for (int j = 0; j <= M; j++) {
 
             if (i == 0) dp[i][j] = j; // quante mosse mi servono per trasformare una stringa vuota in una stringa lunga 'j' 
             else if (j == 0) dp[i][j] = i; // quante mosse mi servono per trasformare una stringa lunga 'i' in una stringa vuota
@@ -49,7 +51,7 @@ int edit_bottom_up(string X, string Y, int N, int M) {
     }
     
     // il risultato finale => "quanti passi ci vogliono per trasformare la stringa lunga N nella stringa lunga M"
-    return dp[M][N];
+    return dp[N][M];
 }
 
 int main() {
