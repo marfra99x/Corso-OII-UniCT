@@ -14,9 +14,6 @@ struct Nodo {
 
 const int INF = numeric_limits<int>::max();
 
-// time complexity: O(V + E log(V))
-// can you design a better solution?
-// suggestion: O(V + E)
 int dijkstra(int n, int src, int dest, Nodo *g) {
     priority_queue<pair<int, int>> pq;
     vector<int> dist(n, INF);
